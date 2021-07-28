@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="firstappication-test-suite.xml" />
+	<munit:test name="firstappication-test-suite-firstappicationFlowTest" doc:id="97729bd2-3f93-4ac8-90e5-4ee53b057209" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to firstappicationFlow" doc:id="de5f320c-a018-4225-ba2c-0dfe53aa7a5c" name="firstappicationFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit:set-event doc:name="Set Event" doc:id="db983253-5038-4c6f-b070-fea2a0698d64" >
+				<munit:payload value="attributes.queryparams.name" mediaType="application/json" />
+			</munit:set-event>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="firstappication-test-suite-firstappicationFlowTest1" doc:id="ee7f998e-d469-4aa0-810a-ff045a9073a1" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to firstappicationFlow" doc:id="6d22b714-4ce5-46b3-a1dd-4f7510814372" name="firstappicationFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit:set-event doc:name="Set Event" doc:id="390916e1-c9ec-40b0-a57d-16c7c52fea4f" >
+				<munit:payload value="attributes.queryparams.address" />
+			</munit:set-event>
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
